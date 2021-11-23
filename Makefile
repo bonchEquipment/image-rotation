@@ -171,7 +171,7 @@ $(foreach target,main tester,$(eval $(call make-compilation-rule,$(target))))
 $(foreach test,$(sort $(wildcard $(TESTER_DIR)/tests/*)),$(eval $(call make-test-rule,$(test))))
 
 clean:
-	$(RM) $(OBJDIR) $(BUILDDIR)
+	$(RM) $(OBJDIR) $(BUILDDIR) $(RM) $(NAME)
 
 $(sort $(DIRS)):
 	$(MKDIR) $@
