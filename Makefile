@@ -1,4 +1,4 @@
-NAME := image-transformer
+NAME := transformer
 
 ##### Compiler / analyzer common configuration.
 
@@ -60,7 +60,7 @@ INCDIR.main = $(SOLUTION_DIR)/include
 OBJDIR.main = $(OBJDIR)/$(SOLUTION_DIR)
 
 SOURCES.main += $(wildcard $(SRCDIR.main)/*.c) $(wildcard $(SRCDIR.main)/*/*.c)
-TARGET.main  := $(BUILDDIR)/$(NAME)
+TARGET.main  := $(NAME)
 
 CFLAGS.main += $(strip $(file < $(SOLUTION_DIR)/compile_flags.txt)) $(CFLAGS) -I$(INCDIR.main)
 
